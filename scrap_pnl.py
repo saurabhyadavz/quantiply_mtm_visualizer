@@ -39,10 +39,10 @@ def scrap_pnl():
             print(curr_pnl)
             insert_table_query = f"INSERT INTO {table_name} VALUES ({current_time}, {curr_pnl})"
             cursor.execute(insert_table_query)
-            time.sleep(1)
+            time.sleep(60)
         else:
             break
     driver.quit()
     
 if __name__ == "__main__":
-    scrap_pnl
+    scrap_pnl()

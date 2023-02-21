@@ -21,7 +21,7 @@ To use **scrap_pnl.py**, run the following command:
 python scrap_pnl.py -phone [QUANTIPY_LOGIN_PHONE] -password [QUANTIPY_LOGIN_PASSWORD] [-outfile OUTFILE] [-interval INTERVAL]
 ```
 
-The **phone** and **password** arguments are required to log in to the Quantiply platform. The **-outfile** argument is optional and can be used to specify the name of the output CSV file. If not specified, the default name is ```<curr_dir>_mtm_<current_date>.csv```. The **-interval** argument is also optional and is used to specify the time interval at which to scrape the PNL data. It should be in the format of "60s", "1m", or "1hr". If not specified, the default interval is 1 hour.
+The **phone** and **password** arguments are required to log in to the Quantiply platform. The **-outfile** argument is optional and can be used to specify the name of the output CSV file. If not specified, the default name is ```<curr_dir>_mtm_<current_date>.csv```. The **-interval** argument is also optional and is used to specify the time interval at which to scrape the PNL data. It should be in the format of _60s_, _1m_, or _1h_. If not specified, the default interval is _60s_.
 
 ### plot_mtm.py
 

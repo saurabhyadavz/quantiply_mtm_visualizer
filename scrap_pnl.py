@@ -52,7 +52,7 @@ def scrap_pnl(args: dict[str, typing.Any]):
     end_time = datetime.time(15, 30)
     # Get current program directory
     program_dir = os.getcwd() 
-    mtm_outfile = os.path.join(program_dir, f"mtm_{datetime.datetime.now().strftime('%d%m%Y')}.csv")
+    mtm_outfile = os.path.join(program_dir, f"mtm_{datetime.datetime.now().strftime('%Y%m%d')}.csv")
     if args.get("outfile"):
         mtm_outfile = args.get("outfile")
     # Open the file in write mode to clear its contents

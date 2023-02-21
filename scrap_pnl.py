@@ -79,9 +79,10 @@ def parse_cmds() -> dict[str, typing.Any]:
         Returns:
             dict[str, typing.Any]: parsed arguments
     """
-    parser = argparse.ArgumentParser(description="Scrap Quantiply Day's MTM")
+    parser = argparse.ArgumentParser(description="Scrap Day MTM from Quantiply")
     parser.add_argument("-outfile", type=str, help="CSV file to store days MTM")
-    parser.add_argument("-interval", type=str, default="60s", help="MTM check time interval (Format:60s, 1m, 1hr)")
+    parser.add_argument("-interval", type=str, default="60s",
+                        help="MTM check time interval (Default: 60s, Format:60s, 1m, 1h)")
     parser.add_argument("-phone", type=str, required=True, help="Quantiply Login Phone number")
     parser.add_argument("-password", type=str, required=True, help="Quantiply Login Password")
     return vars(parser.parse_args())

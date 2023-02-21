@@ -35,4 +35,4 @@ The **-mtm_file** argument is optional and can be used to specify the name of th
 If not specified, the default file name ```mtm_<current_date>.csv``` will be used.
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](https://opensource.org/license/mit/).

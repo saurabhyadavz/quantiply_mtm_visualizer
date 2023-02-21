@@ -25,7 +25,7 @@ def plot_day_mtm(mtm_file: str=None):
       plt.savefig('current_mtm_suff.png')
     except Exception as e:
       logging.error(f"An error occurred: {e}")
-  
+
 def parse_cmds() -> dict[str, typing.Any]:
     """Parses command line
         Returns:

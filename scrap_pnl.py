@@ -73,7 +73,7 @@ def scrap_pnl(args: dict[str, typing.Any]):
                 break
     logging.info(f"Day's MTM stored at: {mtm_outfile}")
     driver.quit()
-    
+
 def parse_cmds() -> dict[str, typing.Any]:
     """Parses command line
         Returns:

@@ -43,7 +43,7 @@ The easiest way to do this is using crontab.
 crontab -e
 ```
 
-* Insert following command in it:
+* Insert the following commands and change your Quantiply password and phone number accordingly:
 ```
 # set timezone to Indian Standard Time
 TZ=Asia/Kolkata
@@ -54,7 +54,9 @@ TZ=Asia/Kolkata
 
 For ex:
 
+![alt text](https://i.ibb.co/x2pRFNS/Screenshot-2023-02-21-at-11-18-56-PM.png)
 
+* Save changes to crontab using ```:wq```
 
 ## License
 This project is licensed under the [MIT License](https://opensource.org/license/mit/).

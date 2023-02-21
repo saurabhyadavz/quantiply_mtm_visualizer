@@ -7,9 +7,9 @@ def plot_day_mtm(mtm_file: str=None):
         Args:
             mtm_file (str): MTM csv file
     """
-    current_mtm_suff = f"mtm_{datetime.datetime.now().strftime('%d%m%Y')}.csv"
+    current_mtm_suff = f"mtm_{datetime.datetime.now().strftime('%d%m%Y')}"
     program_dir = os.getcwd() 
-    mtm_filname = os.path.join(program_dir, current_mtm_suff)
+    mtm_filname = os.path.join(program_dir, current_mtm_suff, ".csv")
     if mtm_file:
       mtm_filname = mtm_file
     try:
@@ -22,7 +22,7 @@ def plot_day_mtm(mtm_file: str=None):
       plt.setp(ax.get_xticklabels(), rotation=30, horizontalalignment='right', fontsize='x-small')
       plt.xlabel('datetime')
       plt.ylabel('pnl')
-      plt.savefig('current_mtm_suff.png')
+      plt.savefig(f'{current_mtm_suff}.png')
     except Exception as e:
       logging.error(f"An error occurred: {e}")
 

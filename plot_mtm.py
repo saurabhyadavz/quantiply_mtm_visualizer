@@ -14,13 +14,14 @@ def plot_day_mtm(mtm_file: str=None):
       mtm_filname = mtm_file
     try:
       mtm_df = pd.read_csv(mtm_filname)
+      mtm_df['datetime'] = pd.to_datetime(mtm_df['datetime'], format='%H:%M:%S.%f')
+      mtm_df['datetime'] = mtm_df['datetime'].dt.strftime('%H:%M')
       mtm_df['pnl']=mtm_df['pnl'].astype(float)
       mtm_df.set_index('datetime', inplace=True)
       ax = mtm_df['pnl'].plot(kind='line', color='black')
       ax.fill_between(mtm_df.index, mtm_df['pnl'], where=mtm_df['pnl'] > 0, color='green')
       ax.fill_between(mtm_df.index, mtm_df['pnl'], where=mtm_df['pnl'] < 0, color='red')
-      plt.setp(ax.get_xticklabels(), rotation=30, horizontalalignment='right', fontsize='x-small')
-      plt.xlabel('datetime')
+      plt.xlabel('time')
       plt.ylabel('pnl')
       plt.savefig(f'{current_mtm_suff}.png')
     except Exception as e:
